@@ -1,54 +1,55 @@
-# React + TypeScript + Vite
+🔐 Voucher Management Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+for login- email:admin@example.com
+           password:admin@123
+           
+A modern, fully responsive React 19 frontend built with TypeScript, designed for managing and distributing vouchers with JWT-based login, a clean dashboard, and CRUD functionality.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Features
+🔐 JWT Authentication – Secure login system.
 
-## Expanding the ESLint configuration
+🎟️ Voucher CRUD – Create, update, delete, and manage vouchers.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+👥 Voucher Distribution – Assign vouchers to users via modal.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+📊 Dashboard – Simple and clean analytics/overview page.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🌙 Fully Responsive UI – Optimized for all screen sizes.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+⚙️ Micro Folder Structure – Scalable and maintainable codebase.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+🔁 React Hook Form + Zod – Type-safe form handling & validation.
+
+📦 State Management with Zustand – Lightweight and intuitive.
+
+💨 Styled with Tailwind CSS + ShadCN – Utility-first + accessible components.
+
+🔔 Notifications with React Toastify – Smooth user feedback system.
+
+
+
+| Tech                | Usage                        |
+| ------------------- | ---------------------------- |
+| **React 19**        | UI development               |
+| **TypeScript**      | Static typing                |
+| **Tailwind CSS**    | Styling (utility-first)      |
+| **ShadCN**          | UI Components                |
+| **Zustand**         | Global state management      |
+| **React Hook Form** | Form handling                |
+| **Zod**             | Schema-based form validation |
+| **React Router**    | Client-side routing          |
+| **React Toastify**  | Notifications                |
+| **Axios**           | HTTP Requests                |
+
+
+src/
+├── components/       # Reusable UI components (e.g., Card, Modal)
+├── pages/            # Page-level components (Login, Dashboard, Vouchers)
+├── hooks/            # Custom hooks (zustand stores, form hooks)
+├── utils/            # Utility functions (formatters, API, toast, etc.)
+├── validation/       # Zod schemas for forms
+├── routes/           # All routes managed with React Router
+├── assets/           # Static images or icons
+├── App.tsx
+└── main.tsx
